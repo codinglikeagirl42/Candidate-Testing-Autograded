@@ -56,16 +56,29 @@ function gradeQuiz(candidateAnswers) {
   //  console.log("Sorry you missed it");
   //  }
   
+  //3.1
+  let totalCorrect = 0;
   // 2.3
   for (let j = 0; j < correctAnswers.length; j++) {
     console.log(`${j+1}) ${questions[j]}`);
     console.log(`Your Answer: ${candidateAnswers[j]}`);
     console.log(`Correct Answer: ${correctAnswers[j]}`);
     console.log('\n');
+    if (correctAnswers[j].toLowerCase() === candidateAnswers[j].toLowerCase()){
+      totalCorrect ++;
+    }
+  }
+  //TODO 3.2a use this variable to calculate the candidates score.
+  //TODO 3.2b calculate the candidate's percentage
+
+  let grade = (totalCorrect / questions.length) * 100; 
+  console.log(`>>> Overall Grade: ${grade}% (${totalCorrect} of ${questions.length} responses correct) <<<`);
+  if (grade >= 80){
+    console.log(">>> Status: PASSED, Happy Dance!! <<<");
+  } else {
+      console.log(">>> Status: FAILED <<<");
   }
 
-  let grade;  //TODO 3.2a use this variable to calculate the candidates score.
-//TODO 3.2b calculate the candidate's percentage
 
   return grade;
 }
