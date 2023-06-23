@@ -1,11 +1,3 @@
-console.log("Hello");
+const quiz = require('./candidate-testing');
 
-function functionName(){
-   //TODO: return "Hello, World!" 
-   let variableName = 12;
-   variableName+=8;
-   
-   return variableName;
-}
-
-console.log(functionName());
+quiz.runProgram();
