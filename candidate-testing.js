@@ -37,7 +37,11 @@ function askForName() {
 function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
   const input = require('readline-sync');
-  candidateAnswer = input.question(question);
+  //candidateAnswer = input.question(question);
+  // Part 2.2
+  for (let i=0; i<questions.length; i++) {
+    candidateAnswers.push(input.question(questions[i]));  
+  }
 
 }
 
@@ -45,12 +49,20 @@ function gradeQuiz(candidateAnswers) {
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
 
-  if (correctAnswer === candidateAnswer){
-    console.log("You Got it right");
-    } 
-  else {
-    console.log("Sorry you missed it");
-    }
+  //if (correctAnswer === candidateAnswer){
+  //  console.log("You Got it right");
+  //  } 
+  //else {
+  //  console.log("Sorry you missed it");
+  //  }
+  
+  // 2.3
+  for (let j = 0; j < correctAnswers.length; j++) {
+    console.log(`${j+1}) ${questions[j]}`);
+    console.log(`Your Answer: ${candidateAnswers[j]}`);
+    console.log(`Correct Answer: ${correctAnswers[j]}`);
+    console.log('\n');
+  }
 
   let grade;  //TODO 3.2a use this variable to calculate the candidates score.
 //TODO 3.2b calculate the candidate's percentage
