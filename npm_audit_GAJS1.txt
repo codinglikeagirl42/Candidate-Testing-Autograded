@@ -1,0 +1,117 @@
+Run `npm audit` for details.
+monty@Monty Candidate-Testing-Autograded % npm audit
+# npm audit report
+
+semver  <7.5.2
+Severity: moderate
+semver vulnerable to Regular Expression Denial of Service - https://github.com/advisories/GHSA-c2qf-rxjj-qqgw
+fix available via `npm audit fix --force`
+Will install jest@25.0.0, which is a breaking change
+node_modules/semver
+  @babel/core  *
+  Depends on vulnerable versions of @babel/helper-compilation-targets
+  Depends on vulnerable versions of semver
+  node_modules/@babel/core
+    @babel/helper-compilation-targets  *
+    Depends on vulnerable versions of @babel/core
+    Depends on vulnerable versions of semver
+    node_modules/@babel/helper-compilation-targets
+    @jest/transform  *
+    Depends on vulnerable versions of @babel/core
+    Depends on vulnerable versions of babel-plugin-istanbul
+    node_modules/@jest/transform
+      babel-jest  >=18.5.0-alpha.7da3df39
+      Depends on vulnerable versions of @babel/core
+      Depends on vulnerable versions of @jest/transform
+      Depends on vulnerable versions of babel-plugin-istanbul
+      Depends on vulnerable versions of babel-preset-jest
+      node_modules/babel-jest
+      jest-runner  >=24.2.0-alpha.0
+      Depends on vulnerable versions of @jest/transform
+      Depends on vulnerable versions of jest-runtime
+      node_modules/jest-runner
+        jest-config  >=24.0.0-alpha.0
+        Depends on vulnerable versions of @babel/core
+        Depends on vulnerable versions of babel-jest
+        Depends on vulnerable versions of jest-circus
+        Depends on vulnerable versions of jest-runner
+        node_modules/jest-config
+          jest-cli  >=24.0.0-alpha.0
+          Depends on vulnerable versions of @jest/core
+          Depends on vulnerable versions of jest-config
+          node_modules/jest-cli
+            jest  >=24.0.0-alpha.0
+            Depends on vulnerable versions of @jest/core
+            Depends on vulnerable versions of jest-cli
+            node_modules/jest
+      jest-runtime  >=24.2.0-alpha.0
+      Depends on vulnerable versions of @jest/globals
+      Depends on vulnerable versions of @jest/transform
+      Depends on vulnerable versions of jest-snapshot
+      node_modules/jest-runtime
+        jest-circus  >=25.2.4
+        Depends on vulnerable versions of @jest/expect
+        Depends on vulnerable versions of jest-runtime
+        Depends on vulnerable versions of jest-snapshot
+        node_modules/jest-circus
+    babel-preset-current-node-syntax  *
+    Depends on vulnerable versions of @babel/core
+    node_modules/babel-preset-current-node-syntax
+      babel-preset-jest  >=24.2.0-alpha.0
+      Depends on vulnerable versions of @babel/core
+      Depends on vulnerable versions of babel-preset-current-node-syntax
+      node_modules/babel-preset-jest
+    istanbul-lib-instrument  >=1.2.0
+    Depends on vulnerable versions of @babel/core
+    Depends on vulnerable versions of semver
+    node_modules/istanbul-lib-instrument
+      @jest/reporters  *
+      Depends on vulnerable versions of @jest/transform
+      Depends on vulnerable versions of istanbul-lib-instrument
+      Depends on vulnerable versions of istanbul-lib-report
+      Depends on vulnerable versions of istanbul-reports
+      node_modules/@jest/reporters
+        @jest/core  *
+        Depends on vulnerable versions of @jest/reporters
+        Depends on vulnerable versions of @jest/transform
+        Depends on vulnerable versions of jest-config
+        Depends on vulnerable versions of jest-resolve-dependencies
+        Depends on vulnerable versions of jest-runner
+        Depends on vulnerable versions of jest-runtime
+        Depends on vulnerable versions of jest-snapshot
+        node_modules/@jest/core
+      babel-plugin-istanbul  >=3.1.0-candidate.0
+      Depends on vulnerable versions of istanbul-lib-instrument
+      node_modules/babel-plugin-istanbul
+    jest-snapshot  >=27.0.0-next.0
+    Depends on vulnerable versions of @babel/core
+    Depends on vulnerable versions of @jest/transform
+    Depends on vulnerable versions of babel-preset-current-node-syntax
+    node_modules/jest-snapshot
+      @jest/expect  *
+      Depends on vulnerable versions of jest-snapshot
+      node_modules/@jest/expect
+        @jest/globals  >=28.0.0-alpha.0
+        Depends on vulnerable versions of @jest/expect
+        node_modules/@jest/globals
+      jest-resolve-dependencies  >=27.0.0-next.0
+      Depends on vulnerable versions of jest-snapshot
+      node_modules/jest-resolve-dependencies
+  make-dir  >=2.0.0
+  Depends on vulnerable versions of semver
+  node_modules/make-dir
+    istanbul-lib-report  >=2.0.5
+    Depends on vulnerable versions of make-dir
+    node_modules/istanbul-lib-report
+      istanbul-reports  >=3.0.0-alpha.0
+      Depends on vulnerable versions of istanbul-lib-report
+      node_modules/istanbul-reports
+
+24 moderate severity vulnerabilities
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+monty@Monty Candidate-Testing-Autograded % 
